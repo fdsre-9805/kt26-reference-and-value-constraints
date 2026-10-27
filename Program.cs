@@ -22,16 +22,6 @@ namespace BoxesApp
             ageBox.Set(ReadNumber("Введите возраст: "));
             Console.WriteLine($"IsEmpty: {ageBox.IsEmpty}");
             Console.WriteLine($"Get(): {ageBox.Get()}");
-
-            // ReferenceBox<int> wrongReferenceBox = new ReferenceBox<int>();
-            // Ошибка CS0452: The type 'int' must be a reference type
-            //   in order to use it as parameter 'T' in the generic type or method 'ReferenceBox<T>'
-            // int - тип значения, а ReferenceBox<T> принимает только ссылочные типы (where T : class)
-
-            // ValueBox<string> wrongValueBox = new ValueBox<string>();
-            // Ошибка CS0453: The type 'string' must be a non-nullable value type
-            //   in order to use it as parameter 'T' in the generic type or method 'ValueBox<T>'
-            // string - ссылочный тип, а ValueBox<T> принимает только типы значений (where T : struct)
         }
 
         static string ReadText(string prompt)
